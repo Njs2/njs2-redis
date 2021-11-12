@@ -11,6 +11,10 @@
   "scripts": {
     "postinstall": "node ./postinstall.js --init-dir $INIT_CWD"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Njs2/njs2-redis.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
