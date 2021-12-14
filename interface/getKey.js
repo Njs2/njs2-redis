@@ -6,9 +6,7 @@ module.exports = async function getKey(key) {
   return new Promise((resolve, reject) => {
     redis.get(key, (err, res) => {
       if (err) reject(err);
-      try{
-        res = JSON.parse(res);
-        }
+      try{res = JSON.parse(res);}
         catch(e){}
       resolve(JSON.parse(res));
     });
