@@ -4,6 +4,7 @@ module.exports = async function setKey(key, value) {
   const redis = await getConnection();
   key = REDIS_PREFIX_KEY + key;
   return new Promise((resolve, reject) => {
+    value = JSON.stringify(value);
     redis.set(key, value, (err, res) => {
       if (err) reject(err);
       resolve(true);
